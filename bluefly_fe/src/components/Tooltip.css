@@ -1,0 +1,302 @@
+.tooltip-container {
+    display: inline-block;
+    position: relative;
+}
+
+.tooltip-box {
+    max-height: 60vh;
+    /* Set a max height for better control */
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 100;
+    /* Ensure it is above other elements */
+    visibility: hidden;
+    /* Default to hidden */
+    opacity: 0;
+    /* Start with opacity 0 */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth transition for both visibility and opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    /* Add padding for better spacing */
+    border: 1px solid red;
+    transform: translate(-3%, -3%) scale(0.95);
+}
+
+.tooltip-container:hover .tooltip-box,
+.tooltip-container:focus .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+    /* Make visible on hover/focus */
+    transform: translate(-3%, -3%) scale(1);
+}
+
+.tooltip-box>div {
+    padding: 10px 20px;
+    /* Adjust padding */
+    margin: 0 auto;
+    /* Center horizontally */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    /* Reduce gap for tighter layout */
+}
+
+.tooltip-box>div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tooltip-box>div div h1 {
+    padding: 0;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+    margin-left: -5px;
+}
+
+.tooltip-box>div div>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tooltip-box>div div>ul li {
+    padding: 5px 0;
+    font-size: 0.9rem;
+    /* Use rem for consistency */
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    /* Smooth color transition */
+}
+
+.tooltip-box>div div>ul li:hover {
+    color: hsl(150, 80%, 60%);
+    /* Use HSL for better color control */
+}
+
+/* .tooltip-box.top {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+}
+
+.tooltip-box.right {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.tooltip-box.bottom {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+}
+
+.tooltip-box.left {
+    top: 50%;
+    right: 100%;
+    transform: translateY(-0%);
+    margin-right: 8px;
+} */
+
+
+
+.tooltip-box.top {
+    bottom: calc(100% + 8px);
+    /* Position tooltip above the trigger */
+    left: 50%;
+    transform: translate(-50%, -100%) scale(0.95);
+}
+
+.tooltip-box.right {
+    top: 50%;
+    left: calc(100% + 8px);
+    /* Position tooltip to the right of the trigger */
+    transform: translateY(-50%) scale(0.95);
+}
+
+.tooltip-box.bottom {
+    top: calc(100% + 8px);
+    /* Position tooltip below the trigger */
+    left: 50%;
+    transform: translate(-50%, 0) scale(0.95);
+}
+
+.tooltip-box.left {
+    top: 50%;
+    right: calc(100% + 8px);
+    /* Position tooltip to the left of the trigger */
+    transform: translateY(-50%) scale(0.95);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .tooltip-container {
+        display: inline-block;
+        position: relative;
+    }
+
+    .tooltip-box {
+        width: 70vw;
+        max-height: 80vh;
+        /* Set a max height for better control */
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+        white-space: nowrap;
+        z-index: 100;
+        /* Ensure it is above other elements */
+        visibility: hidden;
+        /* Default to hidden */
+        opacity: 0;
+        /* Start with opacity 0 */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        /* Smooth transition for both visibility and opacity */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add subtle shadow */
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 10px 0px;
+        /* Add padding for better spacing */
+        border: 1px solid red;
+        transform: translate(-3%, -3%) scale(0.95);
+    }
+
+    .tooltip-container:hover .tooltip-box,
+    .tooltip-container:focus .tooltip-box {
+        visibility: visible;
+        opacity: 1;
+        /* Make visible on hover/focus */
+        transform: translate(-3%, -3%) scale(1);
+    }
+
+    .tooltip-box>div {
+        padding: 10px 20px;
+        /* Adjust padding */
+        margin: 0 auto;
+        /* Center horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+        /* Reduce gap for tighter layout */
+    }
+
+    .tooltip-box>div div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .tooltip-box>div div h1 {
+        padding: 0;
+        font-size: 1rem;
+        text-align: left;
+        font-weight: 500;
+        margin-left: -5px;
+    }
+
+    .tooltip-box>div div>ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .tooltip-box>div div>ul li {
+        padding: 5px 0;
+        font-size: 0.9rem;
+        /* Use rem for consistency */
+        font-weight: 400;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        /* Smooth color transition */
+    }
+
+    .tooltip-box>div div>ul li:hover {
+        color: hsl(150, 80%, 60%);
+        /* Use HSL for better color control */
+    }
+
+    /* .tooltip-box.top {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 8px;
+    }
+    
+    .tooltip-box.right {
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        margin-left: 8px;
+    }
+    
+    .tooltip-box.bottom {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 8px;
+    }
+    
+    .tooltip-box.left {
+        top: 50%;
+        right: 100%;
+        transform: translateY(-0%);
+        margin-right: 8px;
+    } */
+
+
+
+    .tooltip-box.top {
+        bottom: calc(100% + 8px);
+        /* Position tooltip above the trigger */
+        left: 50%;
+        transform: translate(-50%, -100%) scale(0.95);
+    }
+
+    .tooltip-box.right {
+        top: 50%;
+        left: calc(100% + 8px);
+        /* Position tooltip to the right of the trigger */
+        transform: translateY(-50%) scale(0.95);
+    }
+
+    .tooltip-box.bottom {
+        top: calc(100% + 8px);
+        /* Position tooltip below the trigger */
+        left: 50%;
+        transform: translate(-50%, 0) scale(0.95);
+    }
+
+    .tooltip-box.left {
+        top: 50%;
+        right: calc(100% + 8px);
+        /* Position tooltip to the left of the trigger */
+        transform: translateY(-50%) scale(0.95);
+    }
+
+}

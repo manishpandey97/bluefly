@@ -1,0 +1,90 @@
+.homedrawer {
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; */
+    border: 1px solid red;
+}
+
+.drawer-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 98%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.144);
+    padding: 0px;
+    z-index: 1;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;  */
+    /* border: 1px solid red; */
+    border: 1px solid red;
+
+}
+
+.close-btn {
+    /* margin-left: 35px; */
+    padding: 5px;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    /* align-self: flex-end; */
+    /* color: red; */
+}
+
+.drawer-body-header {
+    height: 10vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+
+}
+
+/* .drawer-body input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid red;
+} */
+
+.drawer-footer {
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center; */
+    border: 1px solid red;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.save-btn {
+    background-color: #007bff;
+    /* color: white; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}

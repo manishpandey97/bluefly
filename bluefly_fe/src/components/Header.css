@@ -1,0 +1,71 @@
+/* Laptop header (hidden by default) */
+.laptop-header {
+  display: none;
+  justify-content: space-between;
+  visibility: visible;
+}
+
+.laptop-header .menu-item {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .laptop-header {
+    display: flex;
+  }
+}
+
+.mobile-header-icon {
+  visibility: hidden;
+}
+
+.header-email {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-header-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    visibility: visible;
+  }
+
+  .laptop-header {
+    visibility: hidden;
+  }
+
+  .LuAlignJustify {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(47, 71, 90);
+  }
+
+  .header-email {
+    visibility: hidden;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: #444;
+  }
+
+  .mobile-menu .menu-item {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+  }
+}
